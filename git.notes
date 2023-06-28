@@ -93,6 +93,17 @@ $git commit -m <commit message>
 	- if avoid opening an editor like vim or nano to add a commit message
 
 
+$git remote add <remote_connection_name> <repository_url>
+	- link the local repository to the repository represented by repository_url
+	- usually users put remote_connection_name as "origin" but you can name it anything
+
+$git remote
+	- prints the remote connection name that is established between two repositories
+
+$git push <remote_connection_name> <branch>
+	- uploads changes from local repository to "repository url"
+	- $git push origin master
+
 
 
 
