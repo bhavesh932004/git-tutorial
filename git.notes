@@ -53,6 +53,18 @@ commit
 $git commit
 	- registers staging changes to a commit
 
+$git log 
+	- lists down all the commits of the repository 	
+
+$git restore <file>
+	- removes all the file changes from the staging area to be commited. This can be helpful, if we wrote some bad code and no more want it. Instead of deleting every change line by line, we can		
+	  restore last clean version of the file.
+	- restores the changes when file is in working area because even if the file is commited, the new changes will be in working area and then if you again move the file from working to staging area
+	  then you will need another command to restore the changes.
+
+$git restore --staged <file>
+	- moves the file back from staging area to the working area
+	- but changes are not deleted yet, you need to do $git restore <file> again to actually remove the changes made to the file
 
 
 
