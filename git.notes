@@ -105,6 +105,8 @@ $git push <remote_connection_name> <branch>
 	- $git push origin master
 
 
+remote connection
+	- it helps you to link two git repositories for uploading and downloading change from each other
 
 
 
