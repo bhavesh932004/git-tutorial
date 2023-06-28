@@ -70,6 +70,18 @@ $git restore --staged <file>
 	- but changes are not deleted yet, you need to do $git restore <file> again to actually remove the changes made to the file
 
 
+e.g.
+	- for a particular math exam
+	- your answer sheet is the staging area
+	- while your rough sheet is the working area
+	- what you do is first solve the question in the rought sheet (making changes in working area in terms of git), if you think the solution is correct you write the solution in the answer sheet 
+	  (i.e. $git add <file>) and if the solution is incorrect you do it again (i.e. $git restore <file>).
+	- now your question is written in answer sheet, if you think nothing is left to do with the question you submit it the examiner (i.e. $git commit)
+	- but let's say you forgot to add a point in the solution, what you do is erase the solution fromt the answer sheet (i.e. $git restore --staged <file>) and also if you think the question needs
+	  another solution, you remove it from the rough sheet also (i.e. $git restore <file>) 
+
+
+
 				
 
 
