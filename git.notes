@@ -43,7 +43,7 @@ $git add <filename>
 	- moves a file from working area to the staging area.
 
 $git rm --cached <file>
-	- unstages the file, i.e. moving the file back from staging area to the working area
+	- unstages the uncommited file, i.e. moving the file back from staging area to the working area
 
 
 commit
@@ -57,14 +57,20 @@ $git log
 	- lists down all the commits of the repository 	
 
 $git restore <file>
-	- removes all the file changes from the staging area to be commited. This can be helpful, if we wrote some bad code and no more want it. Instead of deleting every change line by line, we can		
+	- the new changes you add to an already commited file are in working area until you do $git add <file>
+	- removes all the file changes from the working area that are not yet staged. This can be helpful, if we wrote some bad code and no more want it. Instead of deleting every change line by line, we can		
 	  restore last clean version of the file.
 	- restores the changes when file is in working area because even if the file is commited, the new changes will be in working area and then if you again move the file from working to staging area
 	  then you will need another command to restore the changes.
+	- only works if the changes are in working area.
 
-$git restore --staged <file>
-	- moves the file back from staging area to the working area
+$git restore --staged <file> 
+	- unstages the commited file
+	- moves the file changes back from staging area to the working area
 	- but changes are not deleted yet, you need to do $git restore <file> again to actually remove the changes made to the file
+
+
+				
 
 
 
