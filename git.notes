@@ -80,9 +80,18 @@ e.g.
 	- but let's say you forgot to add a point in the solution, what you do is erase the solution fromt the answer sheet (i.e. $git restore --staged <file>) and also if you think the question needs
 	  another solution, you remove it from the rough sheet also (i.e. $git restore <file>) 
 
-
+Difference between $git rm & $git restore?
+	- if you want the whole file to be moved back to the untracked state, you do $git rm --cached <file>, otherwise if you just want the changes to be moved in working area or staging area you do 
+	  $git restore <file> or $git restore --staged <file>
 
 				
+
+$git diff <commit_id_1> <commit_id_2>
+	- prints the difference of all file changes between two commits
+
+$git commit -m <commit message>
+	- if avoid opening an editor like vim or nano to add a commit message
+
 
 
 
