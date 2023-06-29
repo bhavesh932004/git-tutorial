@@ -92,21 +92,26 @@ $git diff <commit_id_1> <commit_id_2>
 $git commit -m <commit message>
 	- if avoid opening an editor like vim or nano to add a commit message
 
-
-$git remote add <remote_connection_name> <repository_url>
-	- link the local repository to the repository represented by repository_url
-	- usually users put remote_connection_name as "origin" but you can name it anything
-
 $git remote
-	- prints the remote connection name that is established between two repositories
+	- lists down all the remote connections that are established between two repositories
+
+$git remote add <name of the remote> <link of the remote>
+	- adds a new link to the remote repository and give a name to it
+	- usually users put <name of the remote> as "origin" but you can name it anything
+
+remote connection
+	- it helps you to link two git repositories for uploading and downloading change from each other
+
+$git remote rm <name of the remote>
+	- deletes a remote connection
+
+$git renmae <old name> <new name> 
+	- renames the remote connection
 
 $git push <remote_connection_name> <branch>
 	- uploads changes from local repository to "repository url"
 	- $git push origin master
 
-
-remote connection
-	- it helps you to link two git repositories for uploading and downloading change from each other
 
 
 
