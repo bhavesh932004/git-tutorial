@@ -133,7 +133,7 @@ $git pull <remote name> <branch name>
 
 If the local repository contains some uncommited changes, $git pull <remote name> <branch name> will abort. 
 
-
+Manually resolving merge conflicts is a bit hectic, you should use VSCode, that's an easy way to go.
 
 
 
