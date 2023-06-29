@@ -119,6 +119,16 @@ $git push <remote_connection_name> <branch>
 	- $git push origin master
 
 
+$git pull <remote name> <branch name>
+	- downloads latest changes from the branch of the mentioned remote repository in your local repository
+
+
+### Recommended practise to do
+	- make changes
+	- git add <file>
+	- git commit
+	- git pull
+	- git push
 
 
 
