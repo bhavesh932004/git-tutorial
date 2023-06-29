@@ -131,8 +131,7 @@ $git pull <remote name> <branch name>
 	- git push
 
 
-
-
+If the local repository contains some uncommited changes, $git pull <remote name> <branch name> will abort. 
 
 
 
