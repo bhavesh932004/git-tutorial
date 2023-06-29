@@ -42,6 +42,12 @@ $git status
 $git add <filename>
 	- moves a file from working area to the staging area.
 
+$git add <file1> <fil2> ... <fileN>
+	- move all the N files to staging area
+
+$git add .
+	- move all the files in the current directory to staging area
+
 $git rm --cached <file>
 	- unstages the uncommited file, i.e. moving the file back from staging area to the working area
 
