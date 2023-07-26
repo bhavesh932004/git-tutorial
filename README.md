@@ -16,15 +16,6 @@ working area - there can be a bunch of files that not currently managed by git. 
 
 staging area - what all files are going to be part of the next version that we will create. This staging area is the place where git knows what changes to be done from the last version to the next version - to move files from working area into the staging area, a command $git add <filename> can do this.
 
-    	+--------------------------------------------------+
-    	|	+------------------+	+------------------+   |
-    	|	|	Working area   |	|	Staging area   |   |
-    	|	+------------------+	+------------------+   |
-    	|				+----------------+				   |
-    	|				|	Repository   |				   |
-    	|				+----------------+				   |
-    	+--------------------------------------------------+
-
 repository - this area actually contains the details of all the previous registered versions and the files in this area, git already manages then and knows their version history.
 
 $git status - prints the current status of all the fies that are in wokring area or staging area or in repository
