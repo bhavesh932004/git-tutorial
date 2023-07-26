@@ -1,0 +1,87 @@
+git
+
+- a version control system.
+- a software/tool using which you can manage multiple versions of a project.
+- facilitates collaborative work.
+- open source
+
+github
+
+- an online tool that harnesses the power of git version control system to actually prepare a collaborative environment.
+- provides a GUI.
+
+$git init - powers your folder to be managed by git, and initializes a new empty repository. - creates a .git folder that contain all the relevant logic to manage versions of your project.
+
+working area - there can be a bunch of files that not currently managed by git. It means that changes done or to be done in those files are not managed by git yet. - a file that is in working area is considered to be not in the staging area. - when you do $git status and you see a bunch of 'untracked files' then these files are actually called to be in the working area.
+
+staging area - what all files are going to be part of the next version that we will create. This staging area is the place where git knows what changes to be done from the last version to the next version - to move files from working area into the staging area, a command $git add <filename> can do this.
+
+    	+--------------------------------------------------+
+    	|	+------------------+	+------------------+   |
+    	|	|	Working area   |	|	Staging area   |   |
+    	|	+------------------+	+------------------+   |
+    	|				+----------------+				   |
+    	|				|	Repository   |				   |
+    	|				+----------------+				   |
+    	+--------------------------------------------------+
+
+repository - this area actually contains the details of all the previous registered versions and the files in this area, git already manages then and knows their version history.
+
+$git status - prints the current status of all the fies that are in wokring area or staging area or in repository
+
+$git add <filename> - moves a file from working area to the staging area.
+
+$git add <file1> <fil2> ... <fileN> - move all the N files to staging area
+
+$git add . - move all the files in the current directory to staging area
+
+$git rm --cached <file> - unstages the uncommited file, i.e. moving the file back from staging area to the working area
+
+commit - it's a particular version of the project. It captures the snapshot the project's staged changes and createa a new version out of it.
+
+$git commit - registers staging changes to a commit
+
+$git log - lists down all the commits of the repository
+
+$git restore <file> - the new changes you add to an already commited file are in working area until you do $git add <file> - removes all the file changes from the working area that are not yet staged. This can be helpful, if we wrote some bad code and no more want it. Instead of deleting every change line by line, we can
+restore last clean version of the file. - restores the changes when file is in working area because even if the file is commited, the new changes will be in working area and then if you again move the file from working to staging area
+then you will need another command to restore the changes. - only works if the changes are in working area.
+
+$git restore --staged <file> - unstages the commited file - moves the file changes back from staging area to the working area - but changes are not deleted yet, you need to do $git restore <file> again to actually remove the changes made to the file
+
+e.g. - for a particular math exam - your answer sheet is the staging area - while your rough sheet is the working area - what you do is first solve the question in the rought sheet (making changes in working area in terms of git), if you think the solution is correct you write the solution in the answer sheet
+(i.e. $git add <file>) and if the solution is incorrect you do it again (i.e. $git restore <file>). - now your question is written in answer sheet, if you think nothing is left to do with the question you submit it to the inviligator (i.e. $git commit) - but let's say you forgot to add a point in the solution, what you do is erase the solution fromt the answer sheet (i.e. $git restore --staged <file>) and also if you think the question needs
+another solution, you remove it from the rough sheet also (i.e. $git restore <file>)
+
+Difference between $git rm & $git restore? - if you want the whole file to be moved back to the untracked state, you do $git rm --cached <file>, otherwise if you just want the changes to be moved in working area or staging area you do
+$git restore <file> or $git restore --staged <file>
+
+$git diff <commit_id_1> <commit_id_2> - prints the difference of all file changes between two commits
+
+$git commit -m <commit message> - if avoid opening an editor like vim or nano to add a commit message
+
+$git remote - lists down all the remote connections that are established between two repositories
+
+$git remote add <name of the remote> <link of the remote> - adds a new link to the remote repository and give a name to it - usually users put <name of the remote> as "origin" but you can name it anything
+
+remote connection - it helps you to link two git repositories for uploading and downloading change from each other
+
+$git remote rm <name of the remote> - deletes a remote connection
+
+$git renmae <old name> <new name> - renames the remote connection
+
+$git push <remote_connection_name> <branch> - uploads changes from local repository to "repository url" - $git push origin master
+
+$git pull <remote name> <branch name> - downloads latest changes from the branch of the mentioned remote repository in your local repository
+
+### Recommended practise to do
+
+    - make changes
+    - git add <file>
+    - git commit
+    - git pull
+    - git push
+
+If the local repository contains some uncommited changes, $git pull <remote name> <branch name> will abort.
+
+Manually resolving merge conflicts is a bit hectic, you should use VSCode, that's an easy way to go.
