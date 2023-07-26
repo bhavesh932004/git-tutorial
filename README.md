@@ -1,11 +1,11 @@
-git
+## git
 
 - a version control system.
 - a software/tool using which you can manage multiple versions of a project.
 - facilitates collaborative work.
 - open source
 
-github
+## github
 
 - an online tool that harnesses the power of git version control system to actually prepare a collaborative environment.
 - provides a GUI.
